@@ -48,18 +48,17 @@ def parse():
                 'lat': 'Los Angeles Times', 'elp': 'El Pais'}
 
     parser = argparse.ArgumentParser()
+    # add option to append results to a text file
     parser.add_argument('--save', action='store', required= False, help='Provide an optional file to which to append headlines.')
 
-    # add option to append results to a text file._true
     group = parser.add_mutually_exclusive_group(required=True)
     # add mutually_exclusive_group choices
 
     group.add_argument("--nyt", action="store_true", help="View headlines from the New York Times")
     group.add_argument("--wapo", action="store_true", help="View headlines from the Washington Post")
-    group.add_argument("--lat", action="store_true", help="View headlines from the Los Angeles Times") # Not working?
+    group.add_argument("--lat", action="store_true", help="View headlines from the Los Angeles Times") 
     group.add_argument("--elp", action="store_true", help="View headlines from El Pais")
 
-    # parse the arguments
     # How many stories do you want to get?
     parser.add_argument("num",action="store",  nargs = '?', default=20, type=int, help="choose how many headlines you would like to see")
 
