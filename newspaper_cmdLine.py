@@ -9,11 +9,8 @@ from datetime import date
 # The user can then decide whether they want to save the results to a text file
 today = date.today()
 
-# Further out:
-# Users can choose to save to a sqlite3 database
-# Will save it in nice, dated and ordered fashion
 
-# Users can select news stories by number and save to notepad.txt
+# Users can select news stories by number and save to text file
 
 def view(results):
     for num, dat in enumerate(results, 1):
